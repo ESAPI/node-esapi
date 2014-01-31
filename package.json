@@ -1,0 +1,20 @@
+{
+    "author": "Karl Düüna <karl.dyyna@gmail.com>",
+    "name": "node-esapi",
+    "description": "OSWASP ESAPI4JS encoders port to node module",
+    "keywords": [
+        "html",
+        "xss",
+        "encoding"
+    ],
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:DeadAlready/node-esapi"
+    },
+    "main": "./lib/esapi.js",
+    "test": "mocha",
+    "devDependencies": {
+        "mocha": "1.13.0"
+    }
+}
