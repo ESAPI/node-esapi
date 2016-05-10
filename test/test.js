@@ -3,10 +3,10 @@ var ESAPI = require('../lib/esapi');
 
 describe('ESAPI', function(){
     it('should encodeForHTML',function(){
-        assert.equal(ESAPI.encoder().encodeForHTML('< > " \' / &'), '&lt; &gt; &quot; &#x27; &#x2f; &amp;');
+        assert.equal(ESAPI.encoder().encodeForHTML('< > " \' / & `'), '&lt; &gt; &quot; &#x27; &#x2f; &amp; &#96;');
     });
     it('should encodeForHTMLAttribute',function(){
-        assert.equal(ESAPI.encoder().encodeForHTMLAttribute(' % * + , - / ; < = > ^ and |'), ' &#x25; &#x2a; &#x2b; , - &#x2f; &#x3b; &lt; &#x3d; &gt; &#x5e; and &#x7c;');
+        assert.equal(ESAPI.encoder().encodeForHTMLAttribute(' % * + , - / ; < = > ^ and | `'), ' &#x25; &#x2a; &#x2b; , - &#x2f; &#x3b; &lt; &#x3d; &gt; &#x5e; and &#x7c; &#96;');
     });
     it('should encodeForJavaScript',function(){
         assert.equal(ESAPI.encoder().encodeForJavaScript('[space] % * + , - / ; < = > ^ and |. Also, a </script>'), '\\x5Bspace\\x5D\\x20\\x25\\x20\\x2A\\x20\\x2B\\x20,\\x20\\x2D\\x20\\x2F\\x20\\x3B\\x20\\x3C\\x20\\x3D\\x20\\x3E\\x20\\x5E\\x20and\\x20\\x7C.\\x20Also,\\x20a\\x20\\x3C\\x2Fscript\\x3E');
