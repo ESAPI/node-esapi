@@ -3,7 +3,7 @@ var ESAPI = require('../lib/esapi');
 
 describe('ESAPI', function(){
     it('should encodeForHTML',function(){
-        assert.equal(ESAPI.encoder().encodeForHTML('< > " \' / &'), '&lt; &gt; &quot; &#x27; &#x2f; &amp;');
+        assert.equal(ESAPI.encoder().encodeForHTML('< > " \' / & `'), '&lt; &gt; &quot; &#x27; &#x2f; &amp; &#96;');
     });
     it('should encodeForHTMLAttribute',function(){
         assert.equal(ESAPI.encoder().encodeForHTMLAttribute(' % * + , - / ; < = > ^ and |'), ' &#x25; &#x2a; &#x2b; , - &#x2f; &#x3b; &lt; &#x3d; &gt; &#x5e; and &#x7c;');
