@@ -1,7 +1,7 @@
 {
     "author": "Karl Düüna <karl.dyyna@gmail.com>",
     "name": "node-esapi",
-    "description": "OSWASP ESAPI4JS encoders port to node module",
+    "description": "OWASP ESAPI4JS encoders port to node module",
     "keywords": [
         "html",
         "xss",
